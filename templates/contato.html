@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - NAVIGARA</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="{{ url_for('index') }}" class="flex items-center gap-2 text-2xl font-bold" style="color: #340909;">
+                <img src="{{ url_for('static', filename='css/images/logo-navigara-branco.png') }}" alt="[Logo da Navigara]" class="h-10" style="filter: invert(1);">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="{{ url_for('index') }}" class="nav-link">Home</a>
+                <a href="{{ url_for('sobre') }}" class="nav-link">Sobre</a>
+                <a href="{{ url_for('servicos') }}" class="nav-link">Serviços</a>
+                <a href="{{ url_for('contato') }}" class="nav-link text-[#c24c2d]">Contato</a> <!-- Link ativo -->
+            </div>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="{{ url_for('index') }}" class="block py-2 px-6 text-sm hover:bg-gray-200">Home</a>
+            <a href="{{ url_for('sobre') }}" class="block py-2 px-6 text-sm hover:bg-gray-200">Sobre</a>
+            <a href="{{ url_for('servicos') }}" class="block py-2 px-6 text-sm hover:bg-gray-200">Serviços</a>
+            <a href="{{ url_for('contato') }}" class="block py-2 px-6 text-sm hover:bg-gray-200">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção "Como Trabalhar com a NAVIGARA?" (ATUALIZADA) -->
+        <section class="text-black-200 py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h1 class="text-4xl md:text-5xl font-bold text-black">Como trabalhar com a NAVIGARA?</h1>
+                </div>
+                <!-- Grid 2x2 para os passos -->
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Passo 1 -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" alt="[Imagem de pessoa usando um laptop]" class="rounded-lg shadow-xl w-full h-64 object-cover mb-6">
+                        <h3 class="text-xl font-bold text-[#c24c2d] mb-2">Passo 1: Entre em contato</h3>
+                        <p>Explore os serviços e veja o que pode fazer sentido para o momento da sua empresa. E se não tiver certeza do que precisa, tudo bem, vamos conversar e descobrir juntos a melhor direção.</p>
+                    </div>
+                    <!-- Passo 2 -->
+                    <div class="flex flex-col items-center text-center">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" alt="[Imagem de pessoas em uma reunião de trabalho]" class="rounded-lg shadow-xl w-full h-64 object-cover mb-6">
+                        <h3 class="text-xl font-bold text-[#c24c2d] mb-2">Passo 2: Entendimento inicial</h3>
+                        <p>Nesta etapa, conversamos sobre o seu cenário atual, os desafios enfrentados e as oportunidades que podemos explorar. A ideia é alinhar expectativas e aferir possibilidades.</p>
+                    </div>
+                    <!-- Passo 3 -->
+                    <div class="flex flex-col items-center text-center">
+                       <img src="https://images.unsplash.com/photo-1583521214690-73421a1829a9?q=80&w=1974&auto=format&fit=crop" alt="[Imagem de uma pessoa escrevendo em um documento]" class="rounded-lg shadow-xl w-full h-64 object-cover mb-6">
+                        <h3 class="text-xl font-bold text-[#c24c2d] mb-2">Passo 3: Proposta</h3>
+                        <p>Eu vou enviar para você um plano de trabalho sob medida, com escopo claro, formato de atuação, prazos e entregas — tudo baseado na conversa inicial.</p>
+                    </div>
+                    <!-- Passo 4 -->
+                     <div class="flex flex-col items-center text-center">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" alt="[Imagem de um aperto de mãos fechando um acordo]" class="rounded-lg shadow-xl w-full h-64 object-cover mb-6">
+                        <h3 class="text-xl font-bold text-[#c24c2d] mb-2">Passo 4: Aprovação e contrato</h3>
+                        <p>Com a proposta validada, seguimos para a formalização do contrato e definição dos detalhes operacionais para iniciar com clareza e segurança.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção do Formulário de Contato -->
+        <section class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <!-- Coluna de Texto -->
+                <div class="text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Aqui, cada conexão importa e toda ideia pode ser o início de uma grande jornada.</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">Se quiser trocar ideias, entender melhor nossos serviços ou simplesmente começar uma conversa, use o formulário. <br><br>Vai ser um prazer te ouvir.</p>
+                </div>
+                <!-- Coluna do Formulário -->
+                <div class="bg-gray-50 p-8 rounded-lg shadow-lg">
+                    <form action="/enviar-contato" method="POST"> <!-- Ação e método para o backend -->
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Nome</label>
+                            <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c24c2d]" placeholder="Seu nome" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c24c2d]" placeholder="seu.email@empresa.com" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">Mensagem</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c24c2d]" placeholder="Como podemos ajudar?" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="w-full bg-[#c24c2d] text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-[#923521] transition-transform duration-300 transform hover:scale-105">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contato-footer" class="bg-[#340909] text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+             <a href="{{ url_for('index') }}" class="flex items-center justify-center gap-2 text-2xl font-bold text-white mb-6">
+                <img src="{{ url_for('static', filename='css/images/logo-navigara-branco.png') }}" alt="[Logo da Navigara]" class="h-10">
+            </a>
+            <div class="flex justify-center items-center space-x-6 mb-6">
+                <a href="{{ url_for('index') }}" class="nav-link-footer">Home</a>
+                <a href="{{ url_for('sobre') }}" class="nav-link-footer">Sobre</a>
+                <a href="{{ url_for('servicos') }}" class="nav-link-footer">Serviços</a>
+            </div>
+            <p class="text-sm text-gray-400 mt-4">© 2025 NAVIGARA. Todos os direitos reservados.</p>
+            <p class="text-sm text-gray-300 mt-2">Navigate change. Empower people.</p>
+        </div>
+    </footer>
+
+    <!-- Script para Menu Mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

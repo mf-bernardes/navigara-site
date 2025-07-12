@@ -1,0 +1,60 @@
+/* Definições globais para o corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Cor de fundo base do PDF, um cinza claro com tom de lavanda */
+    background-color: #F2F0F2; 
+    color: #340909; /* Cor de texto padrão (marrom escuro) */
+}
+
+/* Estilo padrão para links de navegação no header */
+.nav-link {
+    transition: color 0.3s;
+    font-weight: 600; /* semi-bold */
+    color: #3f3f46; /* um cinza escuro para os links */
+}
+
+/* Efeito hover para links de navegação */
+.nav-link:hover {
+    color: #c24c2d; /* Cor de destaque ao passar o mouse */
+}
+
+/* Estiliza as partes do ícone SVG no header */
+.logo-icon path:first-child {
+    stroke: #340909; /* Círculo da bússola */
+}
+.logo-icon path:last-child {
+    stroke: #c24c2d; /* Seta da bússola */
+}
+
+/* Estiliza as partes do ícone SVG no footer */
+.logo-icon-footer path:first-child {
+    stroke: #FFFFFF; /* Círculo da bússola branco */
+}
+.logo-icon-footer path:last-child {
+    stroke: #c24c2d; /* Seta da bússola mantém a cor de destaque */
+}
+
+/* Estilos para os links do rodapé */
+.nav-link-footer {
+    transition: color 0.3s;
+    color: #EAE6EA; /* Cor um pouco mais clara que o texto normal do footer */
+}
+
+.nav-link-footer:hover {
+    color: #FFFFFF; /* Destaque total no hover */
+}
+
+/* NOVO ESTILO PARA O BOTÃO COM BORDA */
+.btn-outline {
+    padding: 0.75rem 2rem; /* 12px vertical, 32px horizontal */
+    border: 2px solid #340909; /* Borda com a cor escura principal */
+    border-radius: 0.5rem; /* cantos arredondados */
+    font-weight: 600; /* semi-bold */
+    color: #340909; /* cor do texto */
+    transition: all 0.3s ease; /* transição suave para tudo */
+}
+
+.btn-outline:hover {
+    background-color: #340909; /* fundo escuro no hover */
+    color: #FFFFFF; /* texto branco no hover */
+}
