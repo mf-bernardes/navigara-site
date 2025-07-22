@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - NAVIGARA</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- CSS Customizado -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <!-- Google Fonts -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -23,8 +20,8 @@
             </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="{{ url_for('index') }}" class="nav-link">Home</a>
-                <a href="{{ url_for('sobre') }}" class="nav-link">Sobre</a>
-                <a href="{{ url_for('servicos') }}" class="nav-link text-[#c24c2d]">Serviços</a> <!-- Link ativo -->
+                <a href="{{ url_for('sobre') }}" class="nav-link">Sobre</a> <!-- Link ativo -->
+                <a href="{{ url_for('servicos') }}" class="nav-link text-[#c24c2d]">Serviços</a>
                 <a href="{{ url_for('contato') }}" class="nav-link">Contato</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none">
@@ -40,77 +37,80 @@
     </header>
 
     <main>
-        <!-- Seção Hero da Página de Serviços -->
-        <section class="bg-white text-center py-20 md:py-28">
-            <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Nossos Serviços</h1>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-700">Estruturamos o caminho para o crescimento sustentável do seu negócio, unindo estratégia, processos e pessoas.</p>
+        <section id="servicos" class="bg-white">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="mb-16">Nossas Soluções para Guiar sua Transformação</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-light text-left p-8 rounded-lg border-t-4 border-accent-blue">
+                        <h3 class="mb-4 text-accent-blue">Consultoria em Agilidade & Cultura</h3>
+                        <p class="text-dark/80">Implementamos frameworks ágeis (Scrum, Kanban) e promovemos uma cultura de colaboração, confiança e melhoria contínua, criando equipes de alta performance.</p>
+                    </div>
+                    <div class="bg-light text-left p-8 rounded-lg border-t-4 border-accent-blue">
+                        <h3 class="mb-4 text-accent-blue">Gestão de Pessoas & Liderança</h3>
+                        <p class="text-dark/80">Alinhamos a gestão de talentos aos objetivos estratégicos, desenvolvendo líderes e equipes para prosperarem em um ambiente de trabalho mais humano, leve e produtivo.</p>
+                    </div>
+                    <div class="bg-light text-left p-8 rounded-lg border-t-4 border-accent-blue">
+                        <h3 class="mb-4 text-accent-blue">Gestão de Automação com IA</h3>
+                        <p class="text-dark/80">Mapeamos, desenhamos e implementamos soluções de automação e Inteligência Artificial para otimizar seus processos, garantindo eficiência e retorno sobre o investimento.</p>
+                    </div>
+                </div>
+
+                <div class="mt-28">
+                    <h2 class="text-center mb-20">Nossa Abordagem de Trabalho</h2>
+                    <div class="relative max-w-2xl mx-auto">
+                        <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-accent-red-light transform -translate-x-1/2"></div>
+                        
+                        <div class="relative mb-12">
+                            <div class="absolute w-5 h-5 bg-light rounded-full left-1/2 top-1 transform -translate-x-1/2 border-4 border-accent-red-medium z-10"></div>
+                            <div class="w-1/2 pr-8 text-right">
+                                <div class="p-6 bg-light rounded-lg shadow-md">
+                                    <h3 class="text-xl">1. Diagnóstico e Mapeamento</h3>
+                                    <p class="mt-2 text-dark/80">Entendemos profundamente seus desafios, processos e cultura para criar um plano de ação personalizado.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative mb-12 flex justify-end">
+                            <div class="absolute w-5 h-5 bg-light rounded-full left-1/2 top-1 transform -translate-x-1/2 border-4 border-accent-red-medium z-10"></div>
+                            <div class="w-1/2 pl-8 text-left">
+                                <div class="p-6 bg-light rounded-lg shadow-md">
+                                    <h3 class="text-xl">2. Desenho da Solução</h3>
+                                    <p class="mt-2 text-dark/80">Cocriamos a estratégia ideal, seja um novo framework ágil ou um projeto de automação, em colaboração com sua equipe.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative mb-12">
+                            <div class="absolute w-5 h-5 bg-light rounded-full left-1/2 top-1 transform -translate-x-1/2 border-4 border-accent-red-medium z-10"></div>
+                            <div class="w-1/2 pr-8 text-right">
+                                <div class="p-6 bg-light rounded-lg shadow-md">
+                                    <h3 class="text-xl">3. Implementação Guiada</h3>
+                                    <p class="mt-2 text-dark/80">Atuamos lado a lado com seus times para colocar a solução em prática, garantindo a adesão e os ajustes necessários.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative mb-12 flex justify-end">
+                            <div class="absolute w-5 h-5 bg-light rounded-full left-1/2 top-1 transform -translate-x-1/2 border-4 border-accent-red-medium z-10"></div>
+                            <div class="w-1/2 pl-8 text-left">
+                                <div class="p-6 bg-light rounded-lg shadow-md">
+                                    <h3 class="text-xl">4. Acompanhamento e Evolução</h3>
+                                    <p class="mt-2 text-dark/80">Monitoramos os resultados, medimos o impacto e garantimos a sustentabilidade das melhorias para um ciclo de evolução contínua.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-
-        <!-- Seção Consultoria e Estratégia -->
-        <section class="py-20 md:py-28">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold">Consultoria e Estratégia</h2>
-                    <p class="text-lg mt-2 text-gray-600">Clareza e foco para otimizar a direção do seu negócio.</p>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <!-- Card Product Discovery -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold mb-4">Product Discovery</h3>
-                        <p class="text-gray-700 leading-relaxed">Validamos hipóteses e garantimos que seus recursos sejam direcionados para as necessidades reais dos usuários, antes mesmo do desenvolvimento.</p>
-                    </div>
-                    <!-- Card Processos Corporativos -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold mb-4">Processos Corporativos</h3>
-                        <p class="text-gray-700 leading-relaxed">Mapeamos e redesenhamos seus fluxos de trabalho para tornar a operação mais leve, colaborativa e perfeitamente alinhada à sua estratégia.</p>
-                    </div>
-                    <!-- Card OKRs e KPIs -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 class="text-2xl font-bold mb-4">Implementação de OKRs & KPIs</h3>
-                        <p class="text-gray-700 leading-relaxed">Apoiamos na definição de objetivos e indicadores-chave, criando um sistema de acompanhamento que impulsiona resultados consistentes.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção Gestão de Projetos (ATUALIZADA) -->
-        <section class="py-20 md:py-28 bg-white">
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                <div class="text-left">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-10">Gestão de Projetos</h2>
-                    <div class="space-y-8">
-                        <div>
-                            <h3 class="text-xl font-bold text-[#c24c2d]">Planejamento Estratégico</h3>
-                            <p class="text-lg font-semibold text-gray-800 mt-1">Direção com propósito.</p>
-                            <p class="text-gray-700 mt-2">Conduzimos líderes e times em jornadas de alinhamento estratégico, com foco em visão de futuro, metas claras e caminhos possíveis.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-[#c24c2d]">Planejamento de Projetos</h3>
-                            <p class="text-lg font-semibold text-gray-800 mt-1">Organização que entrega valor.</p>
-                            <p class="text-gray-700 mt-2">Desenhamos projetos com estrutura, prioridades bem definidas para garantir entregas consistentes.</p>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold text-[#c24c2d]">Gestão de Projetos</h3>
-                            <p class="text-lg font-semibold text-gray-800 mt-1">Entrega com ritmo, clareza e colaboração.</p>
-                            <p class="text-gray-700 mt-2">Cuidamos da entrega ponta a ponta com práticas ágeis, liderança de times, visão de progresso contínuo e foco em resultado real para o negócio.</p>
-                        </div>
-                    </div>
-                </div>
-                 <div>
-                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="[Imagem de uma equipe planejando um projeto em uma lousa de vidro]" class="rounded-lg shadow-xl">
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <!-- Footer (Reutilizado) -->
-    <footer id="contato-footer" class="bg-[#340909] text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-             <a href="{{ url_for('index') }}" class="flex items-center justify-center gap-2 text-2xl font-bold text-white mb-6">
-                <img src="{{ url_for('static', filename='css/images/logo-navigara-branco.png') }}" alt="[Logo da Navigara]" class="h-10">
+    <footer class="bg-dark text-white py-12">
+        <div class="container text-center">
+             <a href="{{ url_for('index') }}" class="flex items-center justify-center gap-2 mb-6">
+                <img src="{{ url_for('static', filename='css/images/logo-navigara-branco.png') }}" alt="Logo da Navigara" class="h-10">
             </a>
             <div class="flex justify-center items-center space-x-6 mb-6">
                 <a href="{{ url_for('index') }}" class="nav-link-footer">Home</a>
@@ -122,15 +122,6 @@
         </div>
     </footer>
 
-    <!-- Script para Menu Mobile -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        });
-    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAVIGARA - Navegue a mudança. Potencialize pessoas.</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- CSS Customizado -->
+    <title>NAVIGARA - Agilidade e Automação com IA</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <!-- Google Fonts -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -19,20 +16,19 @@
     <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="{{ url_for('index') }}" class="flex items-center gap-2 text-2xl font-bold" style="color: #340909;">
-                <img src="{{ url_for('static', filename='css/images/logo-navigara-branco.png') }}" alt="[Logo da Navigara]" class="rounded-lg h-10 object-cover" style="filter: invert(1);">
+                
+                <img src="{{ url_for('static', filename='css/images/logo-navigara-colorido.png') }}" alt="[Logo da Navigara]" class="h-10">
             </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="{{ url_for('index') }}" class="nav-link text-[#c24c2d]">Home</a>
-                <a href="{{ url_for('sobre') }}" class="nav-link">Sobre</a>
+                <a href="{{ url_for('sobre') }}" class="nav-link">Sobre</a> <!-- Link ativo -->
                 <a href="{{ url_for('servicos') }}" class="nav-link">Serviços</a>
                 <a href="{{ url_for('contato') }}" class="nav-link">Contato</a>
             </div>
-            <!-- Botão do Menu Mobile -->
             <button id="mobile-menu-button" class="md:hidden focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
-        <!-- Menu Mobile (oculto por padrão) -->
         <div id="mobile-menu" class="hidden md:hidden">
             <a href="{{ url_for('index') }}" class="block py-2 px-6 text-sm hover:bg-gray-200">Home</a>
             <a href="{{ url_for('sobre') }}" class="block py-2 px-6 text-sm hover:bg-gray-200">Sobre</a>
@@ -42,91 +38,59 @@
     </header>
 
     <main>
-        <!-- NOVA SEÇÃO HERO -->
-        <section id="hero" class="text-center py-24 md:py-32">
-            <div class="container mx-auto px-6 flex flex-col items-center">
-                <!-- Linha pronta para o seu logo -->
-                <img src="{{ url_for('static', filename='css/images/logo-navigara.png') }}" alt="[Logo da Navigara]" >
-                <a href="#contato" class="btn-outline">
-                    Entre em contato
-                </a>
-            </div>
-        </section>
 
-        <!-- Seção "Quem Somos" (Sobre) -->
-        <section id="sobre" class="py-20 md:py-28 bg-white">
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                <!-- Coluna de Texto -->
-                <div class="text-left">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Quem somos</h2>
-                    <div class="text-lg text-gray-800 leading-relaxed space-y-4">
-                        <p>A NAVIGARA nasceu do desejo de transformar o ambiente corporativo com leveza, criando conexões e estimulando a confiança e a transparência entre os times. Acreditamos que essa é a chave para equipes de alta performance.</p>
-                        <p>Uma empresa que une agilidade, metodologias de gestão e experiências transformadoras — dentro e fora do ambiente corporativo.</p>
-                        <p>Fundada por Thais Quenes, profissional com mais de 15 anos de experiência em tecnologia, gestão de times e cultura organizacional, a NAVIGARA acredita que liderar é, antes de tudo, navegar com propósito.</p>
+        <section id="inicio" class="pt-32 pb-16 md:pt-40 md:pb-24">
+    <div class="container flex flex-col items-center">
+
+        <div class="grid md:grid-cols-2 items-center gap-16">
+            <div class="text-center md:text-left">
+                <h1 class="text-dark pb-8">Sua empresa merece crescer com leveza e direção.</h1>
+                <p class="text-lg md-8 text-dark/70">Transformando desafios em crescimento:</p> 
+                <p class="text-lg text-dark/70">A força da agilidade, gestão e IA</p>
+            </div>
+            <div class="hidden md:block">
+                <!-- <p class="text-lg my-6 md:my-8 text-dark/70">Eu ajudo times a transformar o caos em clareza e a sobrecarga em progresso com propósito. Vamos navegar juntos?</p> -->
+                <img src="{{ url_for('static', filename='css/images/thais-escritorio.png') }}" alt="Logo da NAVIGARA" class="w-[25rem]">
+            </div>
+        </div>
+
+        <a href="{{ url_for('contato') }}" class="btn-primary mt-12">Agende uma Conversa</a>
+        
+    </div>
+</section>
+        
+        <section class="bg-white">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2>Como podemos levar sua empresa ao próximo nível?</h2>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-light p-8 rounded-lg shadow-lg">
+                        <h3 class="mb-4">Otimizar Processos</h3>
+                        <p class="text-dark/70 leading-relaxed">Transformamos fluxos de trabalho manuais em processos ágeis e eficientes, liberando sua equipe para focar no que realmente importa.</p>
+                    </div>
+                    <div class="bg-light p-8 rounded-lg shadow-lg">
+                        <h3 class="mb-4">Conectar Equipes</h3>
+                        <p class="text-dark/70 leading-relaxed">Fortalecemos o alinhamento e a colaboração, criando uma cultura de alta performance onde as pessoas se sentem motivadas e engajadas.</p>
+                    </div>
+                    <div class="bg-light p-8 rounded-lg shadow-lg">
+                        <h3 class="mb-4">Inovar com IA</h3>
+                        <p class="text-dark/70 leading-relaxed">Implementamos soluções de automação inteligentes para gerar resultados tangíveis, aumentar a produtividade e preparar sua empresa para o futuro.</p>
                     </div>
                 </div>
-                <!-- Coluna da Imagem -->
-                <div>
-                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" alt="[Imagem de uma equipe colaborando em um ambiente de trabalho moderno e iluminado]" class="rounded-lg shadow-xl w-full h-auto object-cover">
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Serviços -->
-        <section id="servicos" class="py-20 md:py-28">
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                <!-- Coluna da Imagem (aparece primeiro no mobile) -->
-                <div>
-                    <img src="{{ url_for('static', filename='css/images/4c608926de90cdc86e47654b591a275e.png') }}" alt="[Imagem de uma pessoa analisando gráficos e dados em telas de computador]" class="rounded-lg w-full h-auto object-cover md:w-4/5">
-                </div>
-                <!-- Coluna de Texto (aparece em segundo no mobile) -->
-                <div class="text-left">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Como a NAVIGARA pode impulsionar seu negócio</h2>
-                    <div class="text-lg text-gray-800 leading-relaxed space-y-4">
-                        <p>Em um cenário cada vez mais dinâmico e competitivo, empresas precisam de mais do que boas ideias — elas precisam de clareza, estrutura e times preparados para executar com eficiência.</p>
-                        <p>Com foco em agilidade estratégica, organizamos processos, planejamos entregas e facilitamos a construção de times autônomos e colaborativos.</p>
-                        <p>Nosso trabalho vai além da consultoria tradicional. Atuamos junto aos líderes e equipes para estruturar rotinas, definir OKRs e KPIs, e facilitar workshops para fortalecer a cultura do time.</p>
-                        <p class="font-semibold mt-4">Empresas que trabalham com a NAVIGARA ganham não apenas eficiência, mas direção. Criamos estruturas que sustentam o crescimento sem sobrecarregar as pessoas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Contato -->
-        <section id="contato" class="py-20 md:py-28 bg-white">
-            <div class="container mx-auto px-6">
-                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Entre em contato</h2>
-                    <p class="text-lg max-w-2xl mx-auto text-gray-700">Vamos juntos transformar a operação do seu negócio?</p>
-                </div>
-                <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-lg shadow-lg">
-                    <form>
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 font-bold mb-2">Nome</label>
-                            <input type="text" id="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c24c2d]" placeholder="Seu nome">
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
-                            <input type="email" id="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c24c2d]" placeholder="seu.email@empresa.com">
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-bold mb-2">Mensagem</label>
-                            <textarea id="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#c24c2d]" placeholder="Como podemos ajudar?"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="w-full bg-[#c24c2d] text-white font-bold py-3 px-8 rounded-full text-lg hover:bg-[#923521] transition-transform duration-300 transform hover:scale-105">Enviar Mensagem</button>
-                        </div>
-                    </form>
+                <div class="mt-24 p-12 bg-light rounded-lg text-center max-w-4xl mx-auto border-t-4 border-accent-blue">
+                    <p class="text-dark/70 mb-8 text-lg">Em um cenário dinâmico, empresas precisam de clareza, estrutura e times preparados para executar com eficiência. A NAVIGARA atua como parceira estratégica para ajudar seu negócio a navegar com leveza, direção e inteligência operacional.</p>
+                    <p class="text-dark/70 mb-8 text-lg">Vamos além da consultoria tradicional: atuamos junto aos líderes e equipes para estruturar rotinas, definir métricas de sucesso (OKRs e KPIs) e planejar entregas, sempre com foco em criar estruturas que sustentam o crescimento sem sobrecarregar as pessoas.</p>
+                    <a href="{{ url_for('contato') }}" class="btn-primary">Vamos transformar sua operação?</a>
                 </div>
             </div>
         </section>
     </main>
 
-   <!-- Footer (Reutilizado) -->
-    <footer id="contato-footer" class="bg-[#340909] text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-             <a href="{{ url_for('index') }}" class="flex items-center justify-center gap-2 text-2xl font-bold text-white mb-6">
-                <img src="{{ url_for('static', filename='css/images/logo-navigara-branco.png') }}" alt="[Logo da Navigara]" class="h-10">
+    <footer class="bg-dark text-white py-12">
+        <div class="container text-center">
+             <a href="{{ url_for('index') }}" class="flex items-center justify-center gap-2 mb-6">
+                <img src="{{ url_for('static', filename='css/images/logo-navigara-branco.png') }}" alt="Logo da Navigara" class="h-10">
             </a>
             <div class="flex justify-center items-center space-x-6 mb-6">
                 <a href="{{ url_for('index') }}" class="nav-link-footer">Home</a>
@@ -138,15 +102,6 @@
         </div>
     </footer>
 
-    <!-- Script para Menu Mobile -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        });
-    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

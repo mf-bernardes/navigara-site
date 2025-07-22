@@ -1,0 +1,47 @@
+/* Importa as camadas base do Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Camada de estilos base (tags HTML puras) */
+@layer base {
+  body {
+    @apply bg-light text-dark font-sans leading-relaxed; /* Usa as cores do tailwind.config.js */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold text-accent-red-dark;
+  }
+  h1 { @apply text-4xl md:text-5xl leading-tight; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-2xl; }
+  section {
+    @apply py-20 md:py-28; /* Padding padrão para seções */
+  }
+}
+
+/* Camada de componentes (classes reutilizáveis) */
+@layer components {
+  /* Botão Principal - ATUALIZADO PARA AZUL */
+  .btn-primary {
+    @apply inline-block px-7 py-3 bg-accent-blue text-white font-bold rounded-full no-underline transition-all duration-300 shadow-lg;
+    @apply hover:bg-accent-blue-light hover:scale-105 hover:-translate-y-1;
+  }
+  
+  /* Links de Navegação (mantidos) */
+  .nav-link {
+    @apply text-dark font-semibold transition-colors duration-300 hover:text-accent-blue;
+  }
+  
+  /* Links de Navegação do Footer (mantidos) */
+  .nav-link-footer {
+    @apply text-dark font-semibold transition-colors duration-300 hover:text-accent-blue;
+  }
+
+  /* NOVO: Links Sociais para o Rodapé */
+  .social-link svg {
+    @apply w-6 h-6 fill-dark transition-all duration-300;
+  }
+  .social-link:hover svg {
+    @apply fill-accent-blue scale-110;
+  }
+}

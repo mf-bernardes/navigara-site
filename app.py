@@ -35,6 +35,11 @@ def servicos():
 def contato():
     return render_template('contato.html')
 
+# ROTA FINAL PARA A PÁGINA DE CONTATO
+@app.route('/landing_v2', endpoint='landing_v2')
+def landing_v2():
+    return render_template('landing_v2.html')
+
 # ROTA PARA PROCESSAR O FORMULÁRIO (exemplo)
 @app.route('/enviar-contato', methods=['POST'])
 def handle_contact_form():
