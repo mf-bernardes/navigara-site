@@ -600,19 +600,15 @@ h3 {
   line-height: 2rem;
 }
 
-section {
-  
-}
-
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   section {
     
   }
-}
+} */
 
-section {
-  /* Padding padrão para seções */
-}
+/* section {
+   Padding padrão para seções 
+} */
 
 .container {
   width: 100%;
