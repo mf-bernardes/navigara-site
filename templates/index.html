@@ -39,32 +39,43 @@
 
     <main>
 
-        <section id="inicio" class="pt-32 pb-16 md:pt-40 md:pb-24">
-    <div class="container flex flex-col items-center">
-
-        <div class="grid md:grid-cols-2 items-center gap-16">
-            <div class="text-center md:text-left">
-                <h1 class="text-dark pb-8">Sua empresa merece crescer com leveza e direção.</h1>
-                <p class="text-lg md-8 text-dark/70">Transformando desafios em crescimento:</p> 
-                <p class="text-lg text-dark/70">A força da agilidade, gestão e IA</p>
-            </div>
-            <div class="hidden md:block">
-                <!-- <p class="text-lg my-6 md:my-8 text-dark/70">Eu ajudo times a transformar o caos em clareza e a sobrecarga em progresso com propósito. Vamos navegar juntos?</p> -->
-                <img src="{{ url_for('static', filename='css/images/thais-escritorio.png') }}" alt="Logo da NAVIGARA" class="w-[25rem]">
-            </div>
-        </div>
-
-        <a href="{{ url_for('contato') }}" class="btn-primary mt-12">Agende uma Conversa</a>
+<section id="inicio" class="relative flex items-center justify-center h-[31.25rem] md:h-[40.625rem] text-white overflow-hidden pt-8 pb-8">
+    <video
+        autoplay 
+        loop 
+        muted 
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover z-0 grayscale pointer-events-none">
         
+        <source src="{{ url_for('static', filename='videos/negotiation.mp4') }}" type="video/mp4" media="(min-width: 768px)">
+        
+        <source src="{{ url_for('static', filename='videos/negotiation_mobile.mp4') }}" type="video/mp4" media="(max-width: 767px)">
+        
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
+    <div class="absolute inset-0 bg-gray-900/60 z-10"></div>
+
+    <div class="container relative z-20 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold pb-8 !text-black">
+                Sua empresa merece crescer com leveza e direção.
+            </h1>
+            <p class="text-lg text-white">Transformando desafios em crescimento:</p> 
+            <p class="text-lg text-white">A força da agilidade, gestão e IA</p>
+        </div>
+        <a href="{{ url_for('contato') }}" class="btn-primary mt-12">Agende uma Conversa</a>
     </div>
 </section>
+
+
         
-        <section class="bg-white">
-            <div class="container">
-                <div class="text-center mb-16">
-                    <h2>Como podemos levar sua empresa ao próximo nível?</h2>
-                </div>
-                <div class="grid md:grid-cols-3 gap-8 text-center">
+        <section class="bg-white relative z-0">
+        <div class="container py-16">
+            <div class="text-center">
+                <h2>Como podemos levar sua empresa ao próximo nível?</h2>
+            </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center py-12">
                     <div class="bg-light p-8 rounded-lg shadow-lg">
                         <h3 class="mb-4">Otimizar Processos</h3>
                         <p class="text-dark/70 leading-relaxed">Transformamos fluxos de trabalho manuais em processos ágeis e eficientes, liberando sua equipe para focar no que realmente importa.</p>
@@ -78,10 +89,12 @@
                         <p class="text-dark/70 leading-relaxed">Implementamos soluções de automação inteligentes para gerar resultados tangíveis, aumentar a produtividade e preparar sua empresa para o futuro.</p>
                     </div>
                 </div>
-                <div class="mt-24 p-12 bg-light rounded-lg text-center max-w-4xl mx-auto border-t-4 border-accent-blue">
+                <div class="mt-12 p-12 bg-light rounded-lg text-justified max-w-4xl mx-auto border-t-4 border-accent-blue">
                     <p class="text-dark/70 mb-8 text-lg">Em um cenário dinâmico, empresas precisam de clareza, estrutura e times preparados para executar com eficiência. A NAVIGARA atua como parceira estratégica para ajudar seu negócio a navegar com leveza, direção e inteligência operacional.</p>
                     <p class="text-dark/70 mb-8 text-lg">Vamos além da consultoria tradicional: atuamos junto aos líderes e equipes para estruturar rotinas, definir métricas de sucesso (OKRs e KPIs) e planejar entregas, sempre com foco em criar estruturas que sustentam o crescimento sem sobrecarregar as pessoas.</p>
-                    <a href="{{ url_for('contato') }}" class="btn-primary">Vamos transformar sua operação?</a>
+                    <div class="text-center">
+                    <a href="{{ url_for('contato') }}" class="btn-primary text-center">Vamos transformar sua operação?</a>
+                    </div>
                 </div>
             </div>
         </section>

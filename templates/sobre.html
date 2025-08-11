@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="antialiased">
+<body class="antialiased bg-white">
 
     <!-- Header -->
     <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
@@ -36,21 +36,24 @@
         </div>
     </header>
 
-    <main>
-        <section id="sobre" class="bg-light">
+    <!-- <main> -->
+        <section id="sobre" class="bg-accent-blue py-12 pb-16">
             <div class="container">
-                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16 mb-24">
-                    <img src="{{ url_for('static', filename='css/images/thais-escritorio.png') }}" alt="Foto de Thais Quenes" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-8 border-accent-red-light shadow-lg">
-                    <div class="text-center md:text-left">
-                        <h2 class="!text-left mb-4">Sobre a NAVIGARA e quem a conduz</h2>
-                        <p class="mb-4 text-dark/80">A NAVIGARA nasceu do desejo de transformar o ambiente corporativo com leveza, criando conexões e estimulando a confiança e a transparência entre os times. Acreditamos que essa é a chave para equipes de alta performance.</p>
-                        <p class="text-dark/80">Uma empresa que une agilidade, metodologias de gestão e experiências transformadoras — dentro e fora do ambiente corporativo.</p>
-                    </div>
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                    <!-- <img src="{{ url_for('static', filename='css/images/thais-escritorio.png') }}" alt="Foto de Thais Quenes" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-8 border-accent-red-light shadow-lg"> -->
+                    <div class="text-center md:text-center">
+                        <h2 class="!text-center mb-12 text-white">Sobre a Navigara</h2>
+                        <h3 class="!text-left mb-4 text-dark/80 text-gray-300" style="font-weight: normal;">A NAVIGARA nasceu do desejo de transformar o ambiente corporativo com leveza, criando conexões e estimulando a confiança e a transparência entre os times. Acreditamos que essa é a chave para equipes de alta performance.</h3>
+                        <h3 class="!text-left text-dark/80 text-gray-300" style="font-weight: normal;">Somos uma empresa que une <b>agilidade, metodologias de gestão e o poder da automação com inteligência artificial</b> para otimizar processos e impulsionar a eficiência das equipes.</h3>
+                        <h3 class="!text-left text-dark/80 mt-4 text-gray-300" style="font-weight: normal;">Nosso foco é liberar o potencial humano, permitindo que os times se dediquem ao que realmente importa: inovação, estratégia e resultados de alto impacto.</h3>
+                    </div>>
                 </div>
-
-                <div class="grid md:grid-cols-2 gap-10">
-                    <div class="bg-white p-8 md:p-10 rounded-lg border-t-4 border-accent-blue shadow-md">
-                        <h3 class="mb-4 text-accent-blue">Minha Trajetória Profissional</h3>
+            
+        </section>
+        <section class="bg-light">
+                <div class="container grid md:grid-cols-1 gap-10">
+                    <div class="py-12">
+                        <h3 class=" text-accent-blue">Minha Trajetória Profissional</h3>
                         <div class="space-y-4 text-dark/80">
                             <p>Curiosa, inquieta por natureza e apaixonada por encontrar formas mais leves de viver e trabalhar.</p>
                             <p>Minha trajetória profissional tem mais de 15 anos e começou em tecnologia, onde fui desenvolvedora, product owner, business manager e líder de times em grandes empresas. Sempre fui movida por transformação — não só profissionalmente, mas pessoalmente também. Sou dessas que se realiza quando vê um processo funcionando, um time engajado e um projeto saindo do papel com consistência e clareza.</p>
@@ -58,7 +61,9 @@
                             <p>Se você também acredita que é possível construir relações de trabalho mais humanas e eficientes, vai ser um prazer a gente tomar um café.</p>
                         </div>
                     </div>
-                    <div class="bg-white p-8 md:p-10 rounded-lg border-t-4 border-accent-blue shadow-md">
+                </div>
+                <div class="container">
+                    <div class="pb-12">
                         <h3 class="mb-4 text-accent-blue">Além do Trabalho...</h3>
                         <div class="space-y-4 text-dark/80">
                             <p>Sou uma pessoa que valoriza os momentos simples e acredita na leveza como estilo de vida. Amo estar com minha família, com meu namorado e com a nossa corgi, Brisa Maria.</p>
@@ -68,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-
+        </section>
                 <div class="text-center max-w-4xl mx-auto mt-24">
                     <div class="mb-16">
                         <h3 class="mb-6 text-accent-blue">Nosso Propósito</h3>
@@ -82,7 +87,7 @@
                     </div>
                     <div>
                         <h3 class="mb-6 text-accent-blue">Nossos Valores</h3>
-                        <div class="flex flex-wrap justify-center gap-3">
+                        <div class="flex flex-wrap justify-center gap-3 pb-10">
                             <span class="bg-white text-accent-blue font-semibold py-2 px-5 rounded-full border-2 border-accent-blue">Confiança</span>
                             <span class="bg-white text-accent-blue font-semibold py-2 px-5 rounded-full border-2 border-accent-blue">Inovação</span>
                             <span class="bg-white text-accent-blue font-semibold py-2 px-5 rounded-full border-2 border-accent-blue">Colaboração</span>
@@ -92,10 +97,8 @@
                             <span class="bg-white text-accent-blue font-semibold py-2 px-5 rounded-full border-2 border-accent-blue">Coragem</span>
                         </div>
                     </div>
-                </div>
             </div>
-        </section>
-    </main>
+    <!-- </main> -->
 
     <footer class="bg-dark text-white py-12">
         <div class="container text-center">

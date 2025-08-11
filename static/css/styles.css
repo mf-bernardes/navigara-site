@@ -601,14 +601,12 @@ h3 {
 }
 
 section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  
 }
 
 @media (min-width: 768px) {
   section {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    
   }
 }
 
@@ -1196,6 +1194,10 @@ section {
   background-color: rgb(255 255 255 / 0.8);
 }
 
+.bg-white\/50 {
+  background-color: rgb(255 255 255 / 0.5);
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1303,8 +1305,16 @@ section {
   padding-top: 8rem;
 }
 
+.pt-8 {
+  padding-top: 2rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pb-8 {
@@ -1514,6 +1524,10 @@ section {
   --tw-backdrop-blur: blur(12px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.grayscale {
+    filter: grayscale(1);
 }
 
 .transition-transform {
