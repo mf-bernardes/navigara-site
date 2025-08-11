@@ -348,6 +348,7 @@ input:where([type='button']),
 input:where([type='reset']),
 input:where([type='submit']) {
   -webkit-appearance: button;
+  appearance: button;
   /* 1 */
   background-color: transparent;
   /* 2 */
@@ -395,6 +396,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 
 [type='search'] {
   -webkit-appearance: textfield;
+  appearance: textfield;
   /* 1 */
   outline-offset: -2px;
   /* 2 */
@@ -532,9 +534,9 @@ audio,
 iframe,
 embed,
 object {
-  display: block;
+  display: flex;
   /* 1 */
-  vertical-align: middle;
+  vertical-align: center;
   /* 2 */
 }
 
@@ -842,6 +844,10 @@ h3 {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .mt-12 {
@@ -1305,6 +1311,14 @@ h3 {
   padding-top: 2rem;
 }
 
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pt-20 {
+  padding-top: 5rem;
+}
+
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1460,6 +1474,11 @@ h3 {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-white\/80 {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / 0.8);
 }
 
 .text-accent-blue {
