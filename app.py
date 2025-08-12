@@ -1,4 +1,5 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, jsonify, request, redirect, url_for
+from flask_mail import Mail, Message
 # from flask_cors import CORS # Descomente se precisar de CORS
 import os
 # from dotenv import load_dotenv # Descomente se estiver usando um arquivo .env
@@ -12,6 +13,16 @@ import os
 
 # Configuração do Flask
 app = Flask(__name__)
+
+# --- CONFIGURAÇÃO DO FLASK-MAIL ---
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Servidor SMTP do seu provedor de e-mail
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_USERNAME')
+
+mail = Mail(app)
 
 # --- ROTAS DO FLASK ---
 # Adicione 'endpoint' a cada rota para que o url_for() funcione
@@ -40,25 +51,31 @@ def contato():
 def landing_v2():
     return render_template('landing_v2.html')
 
-# ROTA PARA PROCESSAR O FORMULÁRIO (exemplo)
+# ROTA PARA PROCESSAR O FORMULÁRIO
 @app.route('/enviar-contato', methods=['POST'])
 def handle_contact_form():
-    # Esta é a função que receberá os dados do formulário.
-    # Por enquanto, ela apenas imprime os dados no terminal.
-    # No futuro, você pode adicionar aqui a lógica para enviar email ou salvar no banco de dados.
     if request.method == 'POST':
         name = request.form.get('name')
         email = request.form.get('email')
         message = request.form.get('message')
-        
-        print("--- NOVA MENSAGEM DO SITE ---")
-        print(f"Nome: {name}")
-        print(f"Email: {email}")
-        print(f"Mensagem: {message}")
-        print("-----------------------------")
-        
-        # Você pode redirecionar para uma página de "obrigado" ou retornar uma mensagem de sucesso.
-        return "Mensagem recebida com sucesso!", 200
+
+        # Cria a mensagem de e-mail
+        msg = Message(
+            subject=f"Nova mensagem do site: {name}",
+            recipients=[os.getenv('MAIL_RECIPIENT')], # Altere para o e-mail que receberá as mensagens
+            body=f"Nome: {name}\nEmail: {email}\n\nMensagem:\n{message}"
+        )
+
+        try:
+            # Envia a mensagem
+            mail.send(msg)
+            print("E-mail enviado com sucesso!")
+            # Redireciona para uma página de sucesso
+            return redirect(url_for('contato')) # Pode criar uma página de "obrigado.html"
+        except Exception as e:
+            print(f"Erro ao enviar o e-mail: {e}")
+            return "Erro ao enviar a mensagem. Por favor, tente novamente.", 500
+
     return "Método não permitido", 405
 
 # --- FIM DAS ROTAS ---
