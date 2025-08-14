@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify, request, redirect, url_for
 from flask_mail import Mail, Message
+import time
 # from flask_cors import CORS # Descomente se precisar de CORS
 import os
 # from dotenv import load_dotenv # Descomente se estiver usando um arquivo .env
@@ -34,7 +35,7 @@ def home():
 
 @app.route('/sobre', endpoint='sobre')
 def sobre():
-    return render_template('sobre.html')
+    return render_template('sobre.html', timestamp=int(time.time()))
 
 # ROTA ATUALIZADA PARA A PÁGINA DE SERVIÇOS
 @app.route('/servicos', endpoint='servicos')
