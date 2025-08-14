@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='css/images/favicon/favicon.ico') }}">
 </head>
 <body class="antialiased bg-white">
 
@@ -99,6 +99,7 @@
     <section class="bg-gray-100 py-16">
         <div
         class="mx-auto px-6"
+        x-ref="testimonialContainer"
         x-data="{
             active: 0,
             timer: null,
