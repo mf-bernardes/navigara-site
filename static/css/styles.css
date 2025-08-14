@@ -1707,14 +1707,6 @@ h3 {
     .arrow-right { right: -24px; }
 }
 
-/* Correção de altura para os depoimentos */
-.testimonial-content {
-    min-height: 250px; /* Ajuste este valor para acomodar o depoimento mais longo */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .testimonial-photo {
     width: 12rem;
     height: 12rem;
