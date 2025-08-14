@@ -14,7 +14,6 @@
 </head>
 <body class="antialiased bg-white">
 
-    <!-- Header -->
     <header id="header" class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="{{ url_for('index') }}" class="flex items-center gap-2 text-2xl font-bold" style="color: #340909;">
@@ -22,7 +21,7 @@
             </a>
             <div class="hidden md:flex items-center space-x-8">
                 <a href="{{ url_for('index') }}" class="nav-link">Home</a>
-                <a href="{{ url_for('sobre') }}" class="nav-link text-[#c24c2d]">Sobre</a> <!-- Link ativo -->
+                <a href="{{ url_for('sobre') }}" class="nav-link text-[#c24c2d]">Sobre</a>
                 <a href="{{ url_for('servicos') }}" class="nav-link">Serviços</a>
                 <a href="{{ url_for('contato') }}" class="nav-link">Contato</a>
             </div>
@@ -38,80 +37,172 @@
         </div>
     </header>
 
-    <!-- <main> -->
-        <section id="sobre" class="bg-accent-blue py-12 pb-16">
-            <div class="container">
-                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-                    <!-- <img src="{{ url_for('static', filename='css/images/thais-escritorio.png') }}" alt="Foto de Thais Quenes" class="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full border-8 border-accent-red-light shadow-lg"> -->
-                    <div class="text-center md:text-center">
-                        <h2 class="!text-center mb-12 text-white">Sobre a Navigara</h2>
-                        <h3 class="!text-left mb-4 text-dark/80 text-gray-300" style="font-weight: normal;">A NAVIGARA nasceu do desejo de transformar o ambiente corporativo com leveza, criando conexões e estimulando a confiança e a transparência entre os times. Acreditamos que essa é a chave para equipes de alta performance.</h3>
-                        <h3 class="!text-left text-dark/80 text-gray-300" style="font-weight: normal;">Somos uma empresa que une <b>agilidade, metodologias de gestão e o poder da automação com inteligência artificial</b> para otimizar processos e impulsionar a eficiência das equipes.</h3>
-                        <h3 class="!text-left text-dark/80 mt-4 text-gray-300" style="font-weight: normal;">Nosso foco é liberar o potencial humano, permitindo que os times se dediquem ao que realmente importa: inovação, estratégia e resultados de alto impacto.</h3>
-                    </div>>
+    <section id="sobre" class="bg-accent-blue py-12 pb-16">
+        <div class="container">
+            <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+                <div class="text-center md:text-center">
+                    <h2 class="!text-center mb-12 text-white">Sobre a Navigara</h2>
+                    <h3 class="!text-left mb-4 text-dark/80 text-gray-300" style="font-weight: normal;">A NAVIGARA nasceu do desejo de transformar o ambiente corporativo com leveza, criando conexões e estimulando a confiança e a transparência entre os times. Acreditamos que essa é a chave para equipes de alta performance.</h3>
+                    <h3 class="!text-left text-dark/80 text-gray-300" style="font-weight: normal;">Somos uma empresa que une <b>agilidade, metodologias de gestão e o poder da automação com inteligência artificial</b> para otimizar processos e impulsionar a eficiência das equipes.</h3>
+                    <h3 class="!text-left text-dark/80 mt-4 text-gray-300" style="font-weight: normal;">Nosso foco é liberar o potencial humano, permitindo que os times se dediquem ao que realmente importa: inovação, estratégia e resultados de alto impacto.</h3>
                 </div>
-            
-        </section>
-        <section class="bg-light">
-                <div class="container grid md:grid-cols-1 gap-10">
-                    <div class="py-12">
-                        <h3 class=" text-accent-blue">Minha trajetória profissional</h3>
-                        <div class="space-y-4 text-dark/80">
-                            <p>Curiosa, inquieta por natureza e apaixonada por encontrar formas mais leves de viver e trabalhar</p>
-                            <p>Minha trajetória profissional tem mais de 15 anos e começou em tecnologia, onde atuei como desenvolvedora, product owner e líder de times em grandes empresas. Sempre fui movida por transformação — não só profissionalmente, mas pessoalmente também. Sou dessas que se realiza quando vê um processo funcionando, um time engajado e um projeto saindo do papel com consistência e clareza.</p>
-                            <p>E a transformação reflete na minha trajetória profissional. Hoje, atuo de forma independente, apoiando empresas e times a organizarem suas rotinas, tomarem decisões mais conscientes e construírem dinâmicas de trabalho mais fluidas, produtivas e humanas. É isso que me move: transformar o caos em direção, a sobrecarga em cadência, e a pressa em progresso com propósito.</p>
-                            <p>Com essa paixão, nasceu a <b>NAVIGARA</b>: uma empresa que une <b>agilidade, metodologias de gestão e o poder da automação com inteligência artificial</b> para otimizar processos e impulsionar a eficiência das equipes. Nosso foco é liberar o potencial humano, permitindo que os times se dediquem ao que realmente importa: inovação, estratégia e resultados de alto impacto</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="container grid md:grid-cols-1 gap-10">
+            <div class="py-12">
+                <h3 class=" text-accent-blue">Minha trajetória profissional</h3>
+                <div class="space-y-4 text-dark/80">
+                    <p>Curiosa, inquieta por natureza e apaixonada por encontrar formas mais leves de viver e trabalhar</p>
+                    <p>Minha trajetória profissional tem mais de 15 anos e começou em tecnologia, onde atuei como desenvolvedora, product owner e líder de times em grandes empresas. Sempre fui movida por transformação — não só profissionalmente, mas pessoalmente também. Sou dessas que se realiza quando vê um processo funcionando, um time engajado e um projeto saindo do papel com consistência e clareza.</p>
+                    <p>E a transformação reflete na minha trajetória profissional. Hoje, atuo de forma independente, apoiando empresas e times a organizarem suas rotinas, tomarem decisões mais conscientes e construírem dinâmicas de trabalho mais fluidas, produtivas e humanas. É isso que me move: transformar o caos em direção, a sobrecarga em cadência, e a pressa em progresso com propósito.</p>
+                    <p>Com essa paixão, nasceu a <b>NAVIGARA</b>: uma empresa que une <b>agilidade, metodologias de gestão e o poder da automação com inteligência artificial</b> para otimizar processos e impulsionar a eficiência das equipes. Nosso foco é liberar o potencial humano, permitindo que os times se dediquem ao que realmente importa: inovação, estratégia e resultados de alto impacto</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="pb-12">
+                <h3 class="mb-4 text-accent-blue">Além do trabalho...</h3>
+                <div class="space-y-4 text-dark/80">
+                    <p>Sou uma pessoa que encontra grande valor nos momentos simples e que abraça a leveza como filosofia de vida. Meu refúgio e minha maior alegria estão ao lado da minha família, do meu namorado e, claro, da nossa corgi, a Brisa Maria.</p>
+                    <p>Minha curiosidade me impulsiona a viver intensamente, explorando novos sabores, descobrindo novos lugares e, acima de tudo, aprendendo constantemente. Já me aventurei na bateria de carnaval (e meu lugar é na plateia, não sou tão boa nisso), pratiquei mountain bike, onde as subidas desafiadoras sempre me recompensam com paisagens deslumbrantes. E mais recentemente, a vela me conquistou por completo. Estou aprendendo a velejar e, com cada nova brisa, descubro um ritmo diferente de conexão com o mar e com a própria vida.</p>
+                    <p>Para mim, um dia ideal é aquele que tem a presença da natureza, um bom café, uma música leve e, se o universo colaborar com um pôr do sol, o dia se encerra com chave de ouro.</p>
+                    <p>Essa busca por uma vida com mais presença, liberdade e significado é o que me guia, permitindo que eu viva cada vez mais alinhada com minhas crenças e valores, tanto no pessoal quanto no profissional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-accent-red-light">
+        <div class="text-center pt-20">
+            <h3 class="text-center text-white/80" style="font-weight: normal;">“Redesenhar o jeito de trabalhar, para que processos impulsionem pessoas — e não o contrário.”</h3>
+            <h3 class="text-center text-white" style="font-weight: normal;">Esse é meu Propósito</h3>
+        </div>
+        <div class="text-center pt-20">
+            <h3 class="text-center text-white/80" style="font-weight: normal;">Apoiar líderes e equipes a enfrentarem a mudança com confiança, promovendo ambientes mais eficientes, sustentáveis e integrados.</h3>
+            <h3 class="text-center text-white" style="font-weight: normal;">Esse é minha Missão</h3>
+        </div>
+        <div class="text-center py-20">
+            <h3 class="text-center text-white/80" style="font-weight: normal;">Confiança, Inovação, Colaboração, Sustentabilidade, Honestidade, Leveza e Coragem</h3>
+            <h3 class="text-center text-white" style="font-weight: normal;">Esses são meus Valores</h3>
+        </div>
+    </section>
+
+    
+
+    <!-- CARROSSEL DEPOIMENTOS COM SETAS -->
+    <section class="bg-gray-100 py-16">
+        <div
+        class="mx-auto px-6"
+        x-data="{
+            active: 0,
+            timer: null,
+            maxHeight: 0,
+            testimonials: [
+                {
+                    text: 'Thais é daqueles tipos de profissionais que brilha naturalmente, pois na autenticidade dela, ela entrega muito além do esperado pois está sempre em busca de fazer o melhor para o time. Além do conhecimento dela em tecnologia e metodologias ágeis, que já fazem com que ela agregue muitos insights e provocações construtivas, ela tem muito jogo de cintura para contornar situações constrangedoras, ótimo relacionamento interpessoal, e realmente cuida da saúde e do clima do time com muita dedicação, sempre buscando construir um ambiente de trabalho leve e de alta performance.',
+                    author: 'Bruna Monteiro Silveira',
+                    title: 'Itaú Unibanco',
+                    photo: '{{ url_for('static', filename='css/images/depoimento1.png') }}'
+                },
+                {
+                    text: 'Trabalhei durante 1 ano com a Thaís no Itaú e foi uma experiência muito boa, alavancamos uma jornada muito importante pro produto e pro cliente que utilizar os cartões Credicard e Samsung Itaucard, a Thaís é uma excelente profissional, com muita experiência em produtos, processos e metodologias ágeis! Muito focada e sempre em buscar de evoluir o time! ',
+                    author: 'Rênison Lima',
+                    title: 'Itaú Unibanco',
+                    photo: '{{ url_for('static', filename='css/images/depoimento2.png') }}'
+                },
+                {
+                    text: 'Trabalho com a Thais como parte da Tríade da Squad Conquistar, no Itaú. Ela como Team Lead e eu como PO. Thais é uma pessoa extremamente competente e costuma entregar alem do esperado. É essencial na saúde e sucesso da squad, guarda para que o ágil seja aplicado na sua melhor natureza, participa da definição da estratégia e atua diretamente no desbloqueio de problemas. Tudo isso é feito com empatia e proximidade do time, sendo flexível e levando em conta o interesse de todos os envolvidos. É ótimo trabalhar com a Thais!',
+                    author: 'Gabriel Forte',
+                    title: 'Itaú Unibanco',
+                    photo: '{{ url_for('static', filename='css/images/depoimento3.png') }}'
+                },
+                {
+                    text: 'A Thais é uma excelente profissional. Durante o tempo que trabalhamos juntas, pude observar que a mesma sempre está empenhada em ir além nas suas entregas, busca conhecer realmente o assunto no qual está inserida, propõe novas formas de pensar e é próxima aos times, criando vínculos que facilitam a interação dia-a-dia. É determinada, disciplinada e prática. Recomendo!',
+                    author: 'Gisele Sinzker',
+                    title: 'Itaú Unibanco',
+                    photo: '{{ url_for('static', filename='css/images/depoimento4.png') }}'
+                }
+            ],
+            next() {
+                this.active = (this.active + 1) % this.testimonials.length;
+            },
+            prev() {
+                this.active = (this.active - 1 + this.testimonials.length) % this.testimonials.length;
+            },
+            calculateMaxHeight() {
+                let heights = [...this.$refs.testimonialContainer.children].map(el => el.getBoundingClientRect().height);
+                this.maxHeight = Math.max(...heights);
+            }
+        }"
+        x-init="calculateMaxHeight(); timer = setInterval(() => { next() }, 5000)"
+        @mouseenter="clearInterval(timer)"
+        @mouseleave="timer = setInterval(() => { next() }, 5000)"
+    >
+            <div class="max-w-3xl mx-auto text-center relative" tabindex="0" @keydown.right.prevent="next()" @keydown.left.prevent="prev()">
+
+                <template x-for="(t, i) in testimonials" :key="i">
+                    <div x-show="active === i" class="transition-opacity duration-500 ease-in-out p-8">
+                        <div class="flex flex-col items-center">
+                            <img :src="t.photo" :alt="t.author" class="testimonial-photo mb-4 ring-4 ring-white shadow-lg">
+                            <div class="max-w-5xl mx-auto">
+                                <p class="text-xl md:text-xl font-light text-gray-700 leading-relaxed italic mb-4">
+                                    "<span x-text="t.text"></span>"
+                                </p>
+                                <div class="mt-4">
+                                    <p class="font-semibold text-accent-blue" x-text="t.author"></p>
+                                    <p class="text-sm text-gray-500" x-text="t.title"></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </template>
+
+                <button class="arrow-btn arrow-left" @click="prev()" aria-label="Anterior">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 6l-6 6 6 6" />
+                    </svg>
+                </button>
+                <button class="arrow-btn arrow-right" @click="next()" aria-label="Próximo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+
+                <div class="flex justify-center mt-8 space-x-4">
+                    <template x-for="(t, i) in testimonials" :key="i">
+                        <button
+                            @click="active = i"
+                            :class="{ 'bg-accent-blue': active === i, 'bg-gray-300': active !== i }"
+                            class="w-3 h-3 rounded-full transition-colors duration-300 ease-in-out focus:outline-none"
+                            aria-label="Ir para o slide " + (i+1)
+                        ></button>
+                    </template>
                 </div>
-                <div class="container">
-                    <div class="pb-12">
-                        <h3 class="mb-4 text-accent-blue">Além do trabalho...</h3>
-                        <div class="space-y-4 text-dark/80">
-                            <p>Sou uma pessoa que encontra grande valor nos momentos simples e que abraça a leveza como filosofia de vida. Meu refúgio e minha maior alegria estão ao lado da minha família, do meu namorado e, claro, da nossa corgi, a Brisa Maria.</p>
-                            <p>Minha curiosidade me impulsiona a viver intensamente, explorando novos sabores, descobrindo novos lugares e, acima de tudo, aprendendo constantemente. Já me aventurei na bateria de carnaval (e meu lugar é na plateia, não sou tão boa nisso), pratiquei mountain bike, onde as subidas desafiadoras sempre me recompensam com paisagens deslumbrantes. E mais recentemente, a vela me conquistou por completo. Estou aprendendo a velejar e, com cada nova brisa, descubro um ritmo diferente de conexão com o mar e com a própria vida.</p>
-                            <p>Para mim, um dia ideal é aquele que tem a presença da natureza, um bom café, uma música leve e, se o universo colaborar com um pôr do sol, o dia se encerra com chave de ouro.</p>
-                            <p>Essa busca por uma vida com mais presença, liberdade e significado é o que me guia, permitindo que eu viva cada vez mais alinhada com minhas crenças e valores, tanto no pessoal quanto no profissional.</p>
-                        </div>
-                    </div>
-                </div>
-        </section>
-            <section class="bg-accent-red-light">
-                <div class="text-center pt-20">
-                    <h3 class="text-center text-white/80" style="font-weight: normal;">“Redesenhar o jeito de trabalhar, para que processos impulsionem pessoas — e não o contrário.”</h3>
-                    <h3 class="text-center text-white" style="font-weight: normal;">Esse é meu Propósito</h3>
-                </div>
-                <div class="text-center pt-20">
-                    <h3 class="text-center text-white/80" style="font-weight: normal;">Apoiar líderes e equipes a enfrentarem a mudança com confiança, promovendo ambientes mais eficientes, sustentáveis e integrados.</h3>
-                    <h3 class="text-center text-white" style="font-weight: normal;">Esse é minha Missão</h3>
-                </div>
-                <div class="text-center py-20">
-                    <h3 class="text-center text-white/80" style="font-weight: normal;">Confiança, Inovação, Colaboração, Sustentabilidade, Honestidade, Leveza e Coragem</h3>
-                    <h3 class="text-center text-white" style="font-weight: normal;">Esses são meus Valores</h3>
-                </div>
-            </section>
-    <!-- </main> -->
+            </div>
+        </div>
+    </section>
 
     <footer class="bg-dark text-white py-12">
         <div class="container text-center">
             <a href="{{ url_for('index') }}" class="flex items-center justify-center gap-2 mb-6">
                 <img src="{{ url_for('static', filename='css/images/logo-navigara-branco.png') }}" alt="Logo da Navigara" class="h-10">
             </a>
-            
+
             <div class="flex justify-center space-x-6 mb-6">
                 <a href="https://www.linkedin.com/in/thaisquenes/" target="_blank" rel="noopener noreferrer" class="text-white text-2xl">
                     <i class="fa-brands fa-linkedin-in"></i>
                 </a>
-
                 <a href="https://api.whatsapp.com/send?phone=5511930727179" target="_blank" rel="noopener noreferrer" class="text-white hover:text-gray-400 text-2xl">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
-
                 <a href="mailto:thais.quenes@navigara.com.br" class="text-white hover:text-gray-400 text-2xl">
                     <i class="fa-solid fa-envelope"></i>
                 </a>
             </div>
-            
+
             <p class="text-sm text-gray-400 mt-4">© 2025 NAVIGARA. Todos os direitos reservados.</p>
             <p class="text-sm text-gray-300 mt-2">Navigate change. Empower people.</p>
         </div>
